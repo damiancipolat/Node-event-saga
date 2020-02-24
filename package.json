@@ -1,0 +1,16 @@
+{
+  "name": "node_event_saga",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Damian Cipolat",
+  "license": "MIT",
+  "dependencies": {
+    "config": "^3.2.6",
+    "node-fetch": "^2.6.0",
+    "uuid": "^7.0.0"
+  }
+}
