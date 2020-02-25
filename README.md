@@ -9,7 +9,7 @@ In this diagram I show how a transaction is done through different messages. For
 #### Note:
 For this example, I will use for mock the Order, Notification and Payment service the web mocky.io to make fake but real request.
 
-### Events dicctionary
+### Events dictionary
 Events name with description.
 
 - **ORDER_CREATED**: Initial event of the payment flow.
