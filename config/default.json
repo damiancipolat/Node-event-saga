@@ -1,5 +1,15 @@
 {
-  "resources":{
-    "apiGet":"http://www.mocky.io/v2/5e5431122e0000d8ec2db240"
+  "services":{
+    "orders":{
+      "create":"http://www.mocky.io/v2/5e54b68d3100002900eb3285",
+      "get":"http://www.mocky.io/v2/5e54b6123100006300eb327c",
+      "update":"http://www.mocky.io/v2/5e54b6d73100005e00eb3287"
+    },
+    "payment":{
+      "pay":"http://www.mocky.io/v2/5e54b73e3100002900eb328b"
+    },
+    "notification":{
+      "notify":"http://www.mocky.io/v2/5e54b7703100000d00eb328e"
+    }
   }
 }

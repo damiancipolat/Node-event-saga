@@ -1,0 +1,50 @@
+ORDERS:
+
+GET - http://www.mocky.io/v2/5e54b6123100006300eb327c
+
+{
+    "id":1111111111,
+    "creation":"2019-01-01",
+    "user":"mock",
+    "code":"PAYMENT-SMS",
+    "items":[
+        {"code":1},
+        {"code":2},
+        {"code":3},
+        {"code":4}
+    ]
+}
+
+POST - http://www.mocky.io/v2/5e54b68d3100002900eb3285
+
+{
+    "id": 1111111111,
+    "status": "created"
+}
+
+PUT -  http://www.mocky.io/v2/5e54b6d73100005e00eb3287
+
+{
+    "id":1111111111,
+    "status":"updated"
+}
+
+PAYMENT:
+
+POST - http://www.mocky.io/v2/5e54b73e3100002900eb328b
+
+{
+    "uuid":1312324234234,
+    "paymentDate":"2017-01-01",
+    "amount":10000,
+    "status":"payed"
+}
+
+NOTIFY:
+
+POST - http://www.mocky.io/v2/5e54b7703100000d00eb328e
+
+{
+    "uuid":23423445435435,
+    "status":"send"
+}
