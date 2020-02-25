@@ -9,9 +9,9 @@ In this diagram I show how a transaction is done through different messages. For
 ### Events dicctionary
 Events name with each description.
 
-- **EEE**: sadsad
-- **EEE**: sadsad
-- **EEE**: sadsad
-- **EEE**: sadsad
-- **EEE**: sadsad
-- **EEE**: sadsad
+- **ORDER_CREATED**: Initial event of the payment flow.
+- **ORDER_CREATED_SUCCESS**: Sucess order creation event.
+- **ORDER_CREATED_FAIL**: Order creaation error.
+- **PAYMENT_FAIL**: Error in process payment.
+- **PAYMENT_SUCCESS**: Payment succeffull.
+- **FLOW_END**: Send email with the bill and finish the flow.
