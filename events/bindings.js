@@ -1,38 +1,49 @@
 //Get event listeners.
 const {
-  ev_1,
-  ev_1_ok,
-  ev_1_err,
-  ev_2,
-  ev_3,
-  ev_4
+  createOrder,
+  makePayment,
+  updateOrder,
+  createVoucher,
+  sendTicket,
+  notifyFail
 } = require('../events/commands');
 
 //Import event names.
 const {
-  EVENT_1,
-  EVENT_1_SUCCESS,
-  EVENT_1_FAIL,
-  EVENT_2,
-  EVENT_3,
-  EVENT_3_FAIL,
-  EVENT_4
+  ORDER_CREATED,
+  ORDER_CREATED_SUCCESS,
+  ORDER_CREATED_FAIL,
+  PAYMENT_FAIL,
+  PAYMENT_SUCCESS,
+  FLOW_END
 } = require('./dictionary.js');
  
 //Define relation event - function.
 const bindings = [
   {
-    event: EVENT_1,
-    listeners:[ev_1]
-  },  
-  {
-    event: EVENT_1_SUCCESS,
-    listeners:[]
+    event:ORDER_CREATED,
+    listeners:[createOrder]
   },
   {
-    event: EVENT_1_FAIL,
-    listeners:[]
-  }
+    event:ORDER_CREATED_SUCCESS,
+    listeners:[makePayment]
+  },
+  {
+    event:ORDER_CREATED_FAIL,
+    listeners:[notifyFail]
+  },
+  {
+    event:PAYMENT_FAIL,
+    listeners:[updateOrder,notifyFail]
+  },
+  {
+    event:PAYMENT_SUCCESS,
+    listeners:[updateOrder,createVoucher]
+  },
+  {
+    event:FLOW_END,
+    listeners:[sendTicket]
+  }  
 ];
 
 module.exports = bindings;
