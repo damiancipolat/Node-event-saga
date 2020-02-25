@@ -1,9 +1,9 @@
 //Get event listeners.
 const {
   createOrder,
+  createVoucher,
   makePayment,
   updateOrder,
-  createVoucher,
   sendTicket,
   notifyFail
 } = require('../events/commands');
