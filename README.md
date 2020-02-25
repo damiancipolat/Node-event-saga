@@ -2,7 +2,7 @@
 A custom implementation of the SAGA pattern using event driven architecture, created within a single nodejs process.
 
 In this scenario the event bus is a **Event Emitter** into a nodejs process, in more complex project the bus will be sqs or sns in AWS.
-This project are only node.js modules and a scaffolding for more realistics scenarios will be necesary to add an api rest interface.
+This project are only node.js **modules** and a **scaffolding** for more realistics scenarios will be necesary to add an api rest interface.
 
 ### **Events diagram**
 In this diagram I show how a transaction is done through different messages. For each operation two types of SUCCESS and FAIL messages are issued, in the case of FAIL status updates are applied to maintain consistency.
