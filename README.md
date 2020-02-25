@@ -1,8 +1,7 @@
 # Node-event-saga
 A custom implementation of the SAGA pattern using event driven architecture, created within a single nodejs process.
 
-In this scenario the event bus is a **Event Emitter** into a nodejs process, in more complex project the bus will be sqs or sns in aws.
-
+In this scenario the event bus is a **Event Emitter** into a nodejs process, in more complex project the bus will be sqs or sns in AWS.
 This project are only node.js modules and a scaffolding for more realistics scenarios will be necesary to add an api rest interface.
 
 ### **Events diagram**
