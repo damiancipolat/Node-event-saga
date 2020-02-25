@@ -6,4 +6,12 @@ In this diagram I show how a transaction is done through different messages. For
 
 <img src="https://github.com/damiancipolat/Node-event-saga/blob/master/doc/Saga%20payment-Architecture.png?raw=true" width="800px"/>
 
-The services retrieves config from json files stored in a s3 bucket.
+### Events dicctionary
+Events name with each description.
+
+- **EEE**: sadsad
+- **EEE**: sadsad
+- **EEE**: sadsad
+- **EEE**: sadsad
+- **EEE**: sadsad
+- **EEE**: sadsad
