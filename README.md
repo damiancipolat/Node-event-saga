@@ -6,6 +6,9 @@ In this diagram I show how a transaction is done through different messages. For
 
 <img src="https://github.com/damiancipolat/Node-event-saga/blob/master/doc/Saga%20payment-Architecture.png?raw=true" width="800px"/>
 
+#### Note:
+For this example, I will use for mock the Order, Notification and Payment service the web mocky.io to make fake but real request.
+
 ### Events dicctionary
 Events name with description.
 
