@@ -30,3 +30,12 @@ Events name with description.
 npm install
 node app.js
 ```
+
+#### Readings:
+- https://microservices.io/patterns/data/saga.html
+- https://itnext.io/effectively-communicate-between-microservices-de7252ba2f3c
+- https://developers.redhat.com/blog/2018/10/01/patterns-for-distributed-transactions-within-a-microservices-architecture/
+- https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part/
+- https://medium.com/@ijayakantha/microservices-the-saga-pattern-for-distributed-transactions-c489d0ac0247
+- https://itnext.io/microservices-architecture-an-implementation-of-saga-pattern-dbbe5d881c78
+- https://dzone.com/articles/distributed-sagas-for-microservices
