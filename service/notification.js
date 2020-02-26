@@ -6,7 +6,7 @@ const {
 } = config.get('services.notification');
 
 //Send notification to the service.
-const notify = async (deviceId, text)=>{
+const sendNotification = async (deviceId, text)=>{
   
   const body = {
     deviceId,
@@ -20,6 +20,10 @@ const notify = async (deviceId, text)=>{
   };
 
   const res  = await fetch(notify,request);
+
+  if (res.status!=200)
+    throw new Error('Error in notification request');  
+
   const json = await res.json();
 
   return json;
@@ -27,5 +31,5 @@ const notify = async (deviceId, text)=>{
 }
 
 module.exports = {
-  notify
+  sendNotification
 };

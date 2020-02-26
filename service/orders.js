@@ -57,13 +57,14 @@ const updateOrder = async (orderId, status)=>{
     status
   };
  
+  const url  = update+'/'+orderId;
   const request = {
     method: 'put',
     body:JSON.stringify(body),
     headers: { 'Content-Type': 'application/json' },
   };
 
-  const res  = await fetch(notify,request);
+  const res  = await fetch(url,request);
 
   if (res.status!=200)
     throw new Error('Error in order update request');

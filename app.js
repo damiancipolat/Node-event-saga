@@ -17,6 +17,7 @@ const eventEmitter = new events.EventEmitter();
 //Register the events.
 registerAll(eventEmitter, bindings);
 
+//Start event.
 eventEmitter.emit(ORDER_CREATED,{
   uuid:1324324324324324,
   user:'mock',

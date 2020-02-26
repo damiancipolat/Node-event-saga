@@ -2,8 +2,8 @@ const assert = require('assert');
 const uuid   = require('uuid/v1');
 
 const {
-  sendNotification
-} = require('../../service/notification');
+  updateOrder
+} = require('../../service/orders');
 
 const listener = (emitter) => async (event) => {
 
@@ -16,23 +16,14 @@ const listener = (emitter) => async (event) => {
     assert(payload, 'event bad format');
 
     const {
-      orderId,
-      items,
-      detail
+      orderId
     } = payload;
 
     assert(orderId, 'event bad format');
 
-    const {
-      total,
-      msg
-    } = detail;
-
-    assert(orderId, 'event bad format');
-
     //Send request.
-    const result = await sendNotification('mock',msg);
-    console.log('Flow end, notification sent:', result);    
+    const result = await updateOrder(orderId,'PAYED');
+    console.log('Order updated OK:', result);
 
   } catch(err){
     console.log('Error:',err);

@@ -9,30 +9,11 @@ const listener = (emitter) => async (event) => {
 
   try{
 
-    const {
-      payload
-    } = event;
-  
-    assert(payload, 'event bad format');
-
-    const {
-      orderId,
-      items,
-      detail
-    } = payload;
-
-    assert(orderId, 'event bad format');
-
-    const {
-      total,
-      msg
-    } = detail;
-
-    assert(orderId, 'event bad format');
-
+    const msg = 'Error procesing';
+    
     //Send request.
     const result = await sendNotification('mock',msg);
-    console.log('Flow end, notification sent:', result);    
+    console.log('Flow fail:', result);
 
   } catch(err){
     console.log('Error:',err);

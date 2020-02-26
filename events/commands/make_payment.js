@@ -33,7 +33,11 @@ const listener = (emitter) => async (event) => {
     //Make the message.
     const message = {
       uuid:uuid(),
-      payload:result
+      payload:{
+        orderId,
+        items,
+        ...result
+      }
     };
 
     //Emmit the event.

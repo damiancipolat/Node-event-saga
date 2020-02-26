@@ -20,6 +20,10 @@ const payOrder = async (orderId, items)=>{
   };
 
   const res  = await fetch(pay,request);
+
+  if (res.status!=200)
+    throw {orderId, msg:'payment error'};
+
   const json = await res.json();
 
   return json;

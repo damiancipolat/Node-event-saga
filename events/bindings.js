@@ -5,7 +5,9 @@ const {
   makePayment,
   updateOrder,
   sendTicket,
-  notifyFail
+  notifyFail,
+  updateOrderOk,
+  updateOrderErr
 } = require('../events/commands');
 
 //Import event names.
@@ -34,11 +36,11 @@ const bindings = [
   },
   {
     event:PAYMENT_FAIL,
-    listeners:[updateOrder,notifyFail]
+    listeners:[updateOrderErr,notifyFail]
   },
   {
     event:PAYMENT_SUCCESS,
-    listeners:[updateOrder,createVoucher]
+    listeners:[updateOrderOk,createVoucher]
   },
   {
     event:FLOW_END,
