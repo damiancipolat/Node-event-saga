@@ -6,7 +6,7 @@ const {
 } = config.get('services.payment');
 
 //Send payment to the service.
-const pay = async (orderId, items)=>{
+const payOrder = async (orderId, items)=>{
   
   const body = {
     orderId,
@@ -19,7 +19,7 @@ const pay = async (orderId, items)=>{
     headers: { 'Content-Type': 'application/json' },
   };
 
-  const res  = await fetch(notify,request);
+  const res  = await fetch(pay,request);
   const json = await res.json();
 
   return json;
@@ -27,5 +27,5 @@ const pay = async (orderId, items)=>{
 }
 
 module.exports = {
-  pay
+  payOrder
 };

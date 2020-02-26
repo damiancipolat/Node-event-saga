@@ -17,17 +17,20 @@ const getOrder = async (orderId)=>{
 
   const url  = get+'/'+orderId;
   const res  = await fetch(url,request);
-  const json = await res.json();
 
-  return json;
+  if (res.status!=200)
+    throw new Error('Error in order fetch request');
+
+  return await res.json();
   
 }
 
 //Create the order by id.
-const createOrder = async (userId, items)=>{
+const createOrder = async (userId, orderId, items)=>{
   
     const body = {
       userId,
+      orderId,
       items
     };
    
@@ -38,9 +41,11 @@ const createOrder = async (userId, items)=>{
     };
   
     const res  = await fetch(create,request);
-    const json = await res.json();
-  
-    return json;
+    
+    if (res.status!=200)
+      throw new Error('Error in order creation request');
+
+    return await res.json();
   
   }
 
@@ -59,9 +64,11 @@ const updateOrder = async (orderId, status)=>{
   };
 
   const res  = await fetch(notify,request);
-  const json = await res.json();
 
-  return json;
+  if (res.status!=200)
+    throw new Error('Error in order update request');
+
+  return await res.json();
 
 }
 
