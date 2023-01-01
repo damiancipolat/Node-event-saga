@@ -9,7 +9,7 @@
   "author": "Damian Cipolat",
   "license": "MIT",
   "dependencies": {
-    "config": "^3.2.6",
+    "config": "^3.3.8",
     "node-fetch": "^2.6.0",
     "uuid": "^7.0.0"
   }
